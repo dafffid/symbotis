@@ -89,6 +89,24 @@
         .logo-glow {
             filter: drop-shadow(0 4px 20px rgba(234, 88, 12, 0.3));
         }
+        
+        .cta-button {
+            background: linear-gradient(45deg, #ea580c, #1e40af);
+            color: white;
+            padding: 12px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: underline;
+            text-decoration-color: #fbbf24;
+            text-underline-offset: 4px;
+            text-decoration-thickness: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 <body class="bg-white">
@@ -193,7 +211,10 @@
             
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
-                    <h3 class="text-2xl font-bold premium-subtitle mb-4">Optimisation Stratégique</h3>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-chart-line text-2xl orange-accent mr-3"></i>
+                        <h3 class="text-2xl font-bold premium-subtitle">Optimisation Stratégique</h3>
+                    </div>
                     <ul class="space-y-3 text-gray-600">
                         <li>• Identification et optimisation des leviers de croissance</li>
                         <li>• Conception de KPIs mesurables et gouvernance</li>
@@ -202,7 +223,10 @@
                 </div>
                 
                 <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
-                    <h3 class="text-2xl font-bold premium-subtitle mb-4">Automatisation Raisonnée</h3>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-cogs text-2xl blue-accent mr-3"></i>
+                        <h3 class="text-2xl font-bold premium-subtitle">Automatisation Raisonnée</h3>
+                    </div>
                     <ul class="space-y-3 text-gray-600">
                         <li>• Automatisation ciblée avec ROI clair</li>
                         <li>• Productivité accrue en préservant la valeur humaine</li>
@@ -211,7 +235,10 @@
                 </div>
                 
                 <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
-                    <h3 class="text-2xl font-bold premium-subtitle mb-4">Sécurité & Confiance</h3>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-shield-alt text-2xl orange-accent mr-3"></i>
+                        <h3 class="text-2xl font-bold premium-subtitle">Sécurité & Confiance</h3>
+                    </div>
                     <ul class="space-y-3 text-gray-600">
                         <li>• Cybersécurité assistée par IA et playbooks</li>
                         <li>• Identité, authentification et traçabilité blockchain</li>
@@ -222,7 +249,10 @@
             
             <div class="text-center mt-12">
                 <div class="bg-white p-6 rounded-xl shadow-lg inline-block">
-                    <h4 class="text-xl font-bold premium-subtitle mb-3">Orientation Résultats</h4>
+                    <div class="flex items-center justify-center mb-3">
+                        <i class="fas fa-bullseye text-xl blue-accent mr-3"></i>
+                        <h4 class="text-xl font-bold premium-subtitle">Orientation Résultats</h4>
+                    </div>
                     <p class="text-gray-600">Résultats rapides en 30-90 jours • Changement durable • Reporting adapté aux décideurs</p>
                 </div>
             </div>
@@ -349,10 +379,8 @@
                         <h4 class="font-bold premium-subtitle mb-3">Expérience :</h4>
                         <ul class="space-y-2 text-gray-600 text-sm">
                             <li>• Business developer director chez XRPL</li>
-                            <li>• Innovation chez Thales</li>
-                            <li>• Project Manager Airbus</li>
+                            <li>• Innovation chez Thales et Airbus</li>
                             <li>• Consultant start-ups</li>
-                            <li>• Création des modules d'IA à AMADEUS</li>
                         </ul>
                         <h4 class="font-bold premium-subtitle mt-4 mb-3">Formation :</h4>
                         <p class="text-gray-600 text-sm">Business School HEC Paris 2010 • Ingénieur ESSTIN 2003</p>
@@ -368,8 +396,8 @@
                         <h4 class="font-bold premium-subtitle mb-3">Expérience :</h4>
                         <ul class="space-y-2 text-gray-600 text-sm">
                             <li>• Président Duluth Technologies</li>
-                            <li>• Liquidator DTC Investments</li>
                             <li>• Consultant systèmes IT</li>
+                            <li>• Création des modules d'intelligence artificielle à AMADEUS</li>
                         </ul>
                         <h4 class="font-bold premium-subtitle mt-4 mb-3">Formation :</h4>
                         <p class="text-gray-600 text-sm">École Polytechnique 2000-2003</p>
@@ -410,7 +438,10 @@
             
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
-                    <h3 class="text-xl font-bold premium-subtitle mb-4">Cabinet d'Anesthésies MediSafe</h3>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-hospital text-2xl orange-accent mr-3"></i>
+                        <h3 class="text-xl font-bold premium-subtitle">Cabinet d'Anesthésies MediSafe</h3>
+                    </div>
                     <p class="text-gray-600 mb-4">Sécurisation des dossiers patients, optimisation plannings (>50 patients/jour), conformité RGPD.</p>
                     <div class="border-t pt-4">
                         <span class="text-green-600 font-semibold">✓ Conformité RGPD</span>
@@ -418,7 +449,10 @@
                 </div>
                 
                 <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
-                    <h3 class="text-xl font-bold premium-subtitle mb-4">TechnoFab Industries</h3>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-industry text-2xl blue-accent mr-3"></i>
+                        <h3 class="text-xl font-bold premium-subtitle">TechnoFab Industries</h3>
+                    </div>
                     <p class="text-gray-600 mb-4">Automatisation des processus, ROI dès le 3ème mois, -40% de coûts opérationnels.</p>
                     <div class="border-t pt-4">
                         <span class="text-green-600 font-semibold">✓ ROI 3 mois</span><br>
@@ -427,7 +461,10 @@
                 </div>
                 
                 <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
-                    <h3 class="text-xl font-bold premium-subtitle mb-4">FinSecure Banking</h3>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-university text-2xl orange-accent mr-3"></i>
+                        <h3 class="text-xl font-bold premium-subtitle">FinSecure Banking</h3>
+                    </div>
                     <p class="text-gray-600 mb-4">Sécurisation transactions, préparation infrastructures post-quantiques, +30% d'efficacité.</p>
                     <div class="border-t pt-4">
                         <span class="text-green-600 font-semibold">✓ +30% efficacité</span><br>
@@ -438,7 +475,10 @@
             
             <div class="text-center mt-12">
                 <div class="bg-white p-6 rounded-xl shadow-lg">
-                    <h4 class="text-xl font-bold premium-subtitle mb-3">Bénéfices Clients</h4>
+                    <div class="flex items-center justify-center mb-3">
+                        <i class="fas fa-star text-xl blue-accent mr-3"></i>
+                        <h4 class="text-xl font-bold premium-subtitle">Bénéfices Clients</h4>
+                    </div>
                     <p class="text-gray-600">ROI rapide 30-90j • Sécurité renforcée • Adoption utilisateur • Évolutivité</p>
                 </div>
             </div>
@@ -488,8 +528,8 @@
                 <div class="bg-gradient-to-r from-orange-500 to-blue-600 text-white p-8 rounded-xl">
                     <h3 class="text-2xl font-bold mb-4">Prêt à transformer votre entreprise ?</h3>
                     <p class="text-lg mb-6">Contactez-nous pour une consultation gratuite</p>
-                    <button class="bg-white text-gray-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
-                        Commencer maintenant
+                    <button class="cta-button">
+                        Prendre Rendez-vous
                     </button>
                 </div>
             </div>
