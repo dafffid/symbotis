@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitalisation TPE PME : Guide Complet Transformation Digitale 2025 | iZiChange Occitanie</title>
+    <meta name="description" content="Guide complet digitalisation TPE PME Occitanie : étapes transformation digitale, outils essentiels, erreurs à éviter, accompagnement expert. Conseils pratiques dirigeants entreprises transformation numérique Occitanie.">
+    <meta name="keywords" content="digitalisation TPE PME, transformation digitale Occitanie, outils numériques entreprises, accompagnement digital, iZiChange, modernisation entreprise">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --izichange-blue: #1F2A63;
+            --izichange-orange: #F39448;
+            --izichange-light-gray: #F8F9FA;
+            --izichange-dark-gray: #2C3E50;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .izichange-header {
+            background: linear-gradient(135deg, var(--izichange-blue) 0%, #2A3F7A 100%);
+            color: white;
+        }
+        
+        .izichange-orange {
+            color: var(--izichange-orange);
+        }
+        
+        .izichange-blue {
+            color: var(--izichange-blue);
+        }
+        
+        .bg-izichange-blue {
+            background-color: var(--izichange-blue);
+        }
+        
+        .bg-izichange-orange {
+            background-color: var(--izichange-orange);
+        }
+        
+        .border-izichange-orange {
+            border-color: var(--izichange-orange);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--izichange-light-gray) 0%, #E8F4FD 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 25px rgba(31, 42, 99, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .card-shadow:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(31, 42, 99, 0.15);
+        }
+        
+        .step-number {
+            background: linear-gradient(135deg, var(--izichange-orange) 0%, #FF6B35 100%);
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 auto 20px auto;
+        }
+        
+        .tool-icon {
+            background: linear-gradient(135deg, var(--izichange-blue) 0%, #2A3F7A 100%);
+            color: white;
+            border-radius: 12px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin: 0 auto 15px auto;
+        }
+        
+        .error-warning {
+            background: linear-gradient(135deg, #FFE5E5 0%, #FFF0F0 100%);
+            border-left: 4px solid #FF4444;
+        }
+        
+        .success-tip {
+            background: linear-gradient(135deg, #E8F5E8 0%, #F0FFF0 100%);
+            border-left: 4px solid #28A745;
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, var(--izichange-orange) 0%, #FF6B35 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            background-color: rgba(255,255,255,0.1);
+            color: var(--izichange-orange);
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, var(--izichange-orange) 0%, #FF6B35 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(243, 148, 72, 0.3);
+        }
+        
+         {
+            .no-print { display: none !important; }
+            body { font-size: 12pt; }
+            .card-shadow { box-shadow: none; border: 1px solid #ddd; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="izichange-header py-4 no-print">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-rocket text-3xl izichange-orange"></i>
+                    <h1 class="text-2xl font-bold">
+                        <span class="izichange-orange">iZi</span><span class="text-white">Change</span>
+                    </h1>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#accueil" class="nav-link">Accueil</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#processus" class="nav-link">Processus</a>
+                    <a href="#expertise" class="nav-link">Expertise</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="#blog" class="nav-link izichange-orange font-semibold">Blog</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl font-bold mb-6 izichange-blue">
+                Digitalisation TPE PME
+            </h1>
+            <h2 class="text-3xl font-semibold mb-8 izichange-orange">
+                Guide Complet Transformation Digitale 2025
+            </h2>
+            <p class="text-xl text-gray-700 mb-12 max-w-4xl mx-auto">
+                Du garagiste au cabinet médical, découvrez comment réussir votre transformation digitale 
+                avec une approche pragmatique et des résultats mesurables
+            </p>
+            
+            <!-- Stats -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
+                <div class="stat-card">
+                    <div class="stat-number">76%</div>
+                    <p class="text-gray-600 font-medium">des PME ont engagé leur digitalisation</p>
+                    <p class="text-sm text-gray-500">Source: France Num 2024</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">+25%</div>
+                    <p class="text-gray-600 font-medium">gain de productivité moyen</p>
+                    <p class="text-sm text-gray-500">Après digitalisation</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">30-90j</div>
+                    <p class="text-gray-600 font-medium">pour voir les premiers résultats</p>
+                    <p class="text-sm text-gray-500">Approche iZiChange</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">ROI</div>
+                    <p class="text-gray-600 font-medium">retour sur investissement garanti</p>
+                    <p class="text-sm text-gray-500">Dès 6 mois</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pourquoi Digitaliser -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 izichange-blue">
+                Pourquoi Digitaliser Votre TPE/PME ?
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="card-shadow bg-white rounded-lg p-8">
+                    <div class="tool-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 izichange-blue">Améliorer la Performance</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><i class="fas fa-check izichange-orange mr-2"></i>Optimisation des processus</li>
+                        <li><i class="fas fa-check izichange-orange mr-2"></i>Réduction des tâches répétitives</li>
+                        <li><i class="fas fa-check izichange-orange mr-2"></i>Meilleure prise de décision</li>
+                        <li><i class="fas fa-check izichange-orange mr-2"></i>Suivi des KPIs en temps réel</li>
+                    </ul>
+                </div>
+                
+                <div class="card-shadow bg-white rounded-lg p-8">
+                    <div class="tool-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 izichange-blue">Satisfaire les Clients</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><i class="fas fa-check izichange-orange mr-2"></i>Service client 24/7</li>
+                        <li><i class="fas fa-check izichange-orange mr-2"></i>Réactivité renforcée</li>
+                        <li><i class="fas fa-check izichange-orange mr-2"></i>Expérience personnalisée</li>
+                        <li><i class="fas fa-check izichange-orange mr-2"></i>Canaux de communication multiples</li>
+                    </ul>
+                </div>
+                
+                <div class="card-shadow bg-white rounded-lg p-8">
+                    <div class="tool-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 izichange-blue">Rester Compétitif</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><i class="fas fa-check izichange-orange mr-2"></i>Adaptation aux nouvelles attentes</li>
+                        <li><i class="fas fa-check izichange-orange mr-2"></i>Différenciation concurrentielle</li>
+                        <li><i class="fas fa-check izichange-orange mr-2"></i>Agilité organisationnelle</li>
+                        <li><i class="fas fa-check izichange-orange mr-2"></i>Innovation continue</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Les 5 Étapes de la Digitalisation -->
+    <section class="py-16 gradient-bg">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 izichange-blue">
+                Les 5 Étapes de Votre Transformation Digitale
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+                <div class="bg-white rounded-lg p-6 card-shadow text-center">
+                    <div class="step-number">1</div>
+                    <h3 class="text-lg font-semibold mb-3 izichange-blue">Audit Digital</h3>
+                    <p class="text-gray-700 text-sm">Analyse de l'existant et identification des besoins</p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 card-shadow text-center">
+                    <div class="step-number">2</div>
+                    <h3 class="text-lg font-semibold mb-3 izichange-blue">Stratégie</h3>
+                    <p class="text-gray-700 text-sm">Définition des objectifs et roadmap personnalisée</p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 card-shadow text-center">
+                    <div class="step-number">3</div>
+                    <h3 class="text-lg font-semibold mb-3 izichange-blue">Outils</h3>
+                    <p class="text-gray-700 text-sm">Sélection et implémentation des solutions adaptées</p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 card-shadow text-center">
+                    <div class="step-number">4</div>
+                    <h3 class="text-lg font-semibold mb-3 izichange-blue">Formation</h3>
+                    <p class="text-gray-700 text-sm">Accompagnement des équipes et transfert de compétences</p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 card-shadow text-center">
+                    <div class="step-number">5</div>
+                    <h3 class="text-lg font-semibold mb-3 izichange-blue">Optimisation</h3>
+                    <p class="text-gray-700 text-sm">Suivi des résultats et amélioration continue</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outils Essentiels -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 izichange-blue">
+                Outils Essentiels par Domaine d'Activité
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="card-shadow bg-white rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4 izichange-orange">
+                        <i class="fas fa-wrench mr-2"></i>Artisans & Services
+                    </h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><strong>Agenda en ligne:</strong> Calendly, Doctolib</li>
+                        <li><strong>Devis/Facturation:</strong> Pennylane, Sage</li>
+                        <li><strong>CRM:</strong> HubSpot, Salesforce</li>
+                        <li><strong>Communication:</strong> WhatsApp Business</li>
+                        <li><strong>Site web:</strong> WordPress, Wix</li>
+                    </ul>
+                </div>
+                
+                <div class="card-shadow bg-white rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4 izichange-orange">
+                        <i class="fas fa-store mr-2"></i>Commerce & Retail
+                    </h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><strong>E-commerce:</strong> Shopify, WooCommerce</li>
+                        <li><strong>Caisse:</strong> Square, SumUp</li>
+                        <li><strong>Stock:</strong> Stockly, TradeGecko</li>
+                        <li><strong>Marketing:</strong> Mailchimp, Sendinblue</li>
+                        <li><strong>Analytics:</strong> Google Analytics</li>
+                    </ul>
+                </div>
+                
+                <div class="card-shadow bg-white rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4 izichange-orange">
+                        <i class="fas fa-user-md mr-2"></i>Professions Libérales
+                    </h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><strong>Gestion cabinet:</strong> Doctolib Pro</li>
+                        <li><strong>Téléconsultation:</strong> Medadom</li>
+                        <li><strong>Comptabilité:</strong> Cegid, EBP</li>
+                        <li><strong>Signature:</strong> DocuSign, HelloSign</li>
+                        <li><strong>Sauvegarde:</strong> Google Drive, Dropbox</li>
+                    </ul>
+                </div>
+                
+                <div class="card-shadow bg-white rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4 izichange-orange">
+                        <i class="fas fa-industry mr-2"></i>PME Industrielles
+                    </h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><strong>ERP:</strong> SAP, Odoo</li>
+                        <li><strong>GMAO:</strong> Mobility Work</li>
+                        <li><strong>Qualité:</strong> Qualio, Winddle</li>
+                        <li><strong>Production:</strong> MES, SCADA</li>
+                        <li><strong>BI:</strong> Power BI, Tableau</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Erreurs à Éviter -->
+    <section class="py-16 gradient-bg">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 izichange-blue">
+                Les 7 Erreurs à Éviter Absolument
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="error-warning rounded-lg p-6">
+                    <h3 class="text-lg font-semibold mb-3 text-red-600">
+                        <i class="fas fa-exclamation-triangle mr-2"></i>1. Vouloir Tout Digitaliser d'un Coup
+                    </h3>
+                    <p class="text-gray-700 mb-3">
+                        Commencer par trop de projets simultanés surcharge les équipes et dilue les efforts.
+                    </p>
+                    <div class="success-tip rounded-lg p-4">
+                        <strong class="text-green-600">💡 Solution:</strong> Approche progressive, un processus à la fois
+                    </div>
+                </div>
+                
+                <div class="error-warning rounded-lg p-6">
+                    <h3 class="text-lg font-semibold mb-3 text-red-600">
+                        <i class="fas fa-exclamation-triangle mr-2"></i>2. Négliger la Formation des Équipes
+                    </h3>
+                    <p class="text-gray-700 mb-3">
+                        Les meilleurs outils sont inutiles si personne ne sait les utiliser correctement.
+                    </p>
+                    <div class="success-tip rounded-lg p-4">
+                        <strong class="text-green-600">💡 Solution:</strong> Budget formation = 20% du projet digital
+                    </div>
+                </div>
+                
+                <div class="error-warning rounded-lg p-6">
+                    <h3 class="text-lg font-semibold mb-3 text-red-600">
+                        <i class="fas fa-exclamation-triangle mr-2"></i>3. Choisir des Outils Trop Complexes
+                    </h3>
+                    <p class="text-gray-700 mb-3">
+                        Solutions sur-dimensionnées qui découragent l'adoption et génèrent des coûts inutiles.
+                    </p>
+                    <div class="success-tip rounded-lg p-4">
+                        <strong class="text-green-600">💡 Solution:</strong> Commencer simple, évoluer progressivement
+                    </div>
+                </div>
+                
+                <div class="error-warning rounded-lg p-6">
+                    <h3 class="text-lg font-semibold mb-3 text-red-600">
+                        <i class="fas fa-exclamation-triangle mr-2"></i>4. Ignorer la Cybersécurité
+                    </h3>
+                    <p class="text-gray-700 mb-3">
+                        49% des dirigeants s'inquiètent du piratage, mais peu agissent préventivement.
+                    </p>
+                    <div class="success-tip rounded-lg p-4">
+                        <strong class="text-green-600">💡 Solution:</strong> Sécurité dès la conception, pas après
+                    </div>
+                </div>
+                
+                <div class="error-warning rounded-lg p-6">
+                    <h3 class="text-lg font-semibold mb-3 text-red-600">
+                        <i class="fas fa-exclamation-triangle mr-2"></i>5. Ne Pas Définir d'Objectifs Mesurables
+                    </h3>
+                    <p class="text-gray-700 mb-3">
+                        Sans KPIs clairs, impossible de mesurer le ROI et d'ajuster la stratégie.
+                    </p>
+                    <div class="success-tip rounded-lg p-4">
+                        <strong class="text-green-600">💡 Solution:</strong> 3-5 indicateurs maximum, suivis mensuellement
+                    </div>
+                </div>
+                
+                <div class="error-warning rounded-lg p-6">
+                    <h3 class="text-lg font-semibold mb-3 text-red-600">
+                        <i class="fas fa-exclamation-triangle mr-2"></i>6. Sous-estimer les Coûts Cachés
+                    </h3>
+                    <p class="text-gray-700 mb-3">
+                        Licences, maintenance, formation, migration des données... Les coûts s'accumulent.
+                    </p>
+                    <div class="success-tip rounded-lg p-4">
+                        <strong class="text-green-600">💡 Solution:</strong> Budget total = coût initial × 1.5 à 2
+                    </div>
+                </div>
+                
+                <div class="error-warning rounded-lg p-6">
+                    <h3 class="text-lg font-semibold mb-3 text-red-600">
+                        <i class="fas fa-exclamation-triangle mr-2"></i>7. Résistance au Changement Non Anticipée
+                    </h3>
+                    <p class="text-gray-700 mb-3">
+                        22% des dirigeants citent la résistance des employés comme frein principal.
+                    </p>
+                    <div class="success-tip rounded-lg p-4">
+                        <strong class="text-green-600">💡 Solution:</strong> Impliquer les équipes dès la conception
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap par Secteur -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 izichange-blue">
+                Roadmap Digitalisation par Secteur
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Garage Automobile -->
+                <div class="card-shadow bg-white rounded-lg p-8">
+                    <h3 class="text-2xl font-semibold mb-6 izichange-orange">
+                        <i class="fas fa-car mr-3"></i>Garage Automobile
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-izichange-blue text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">1</div>
+                            <div>
+                                <h4 class="font-semibold izichange-blue">Mois 1-2: Gestion Client</h4>
+                                <p class="text-gray-700 text-sm">CRM + Agenda en ligne + SMS automatiques</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-izichange-blue text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">2</div>
+                            <div>
+                                <h4 class="font-semibold izichange-blue">Mois 3-4: Facturation</h4>
+                                <p class="text-gray-700 text-sm">Devis automatisés + Paiement en ligne</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-izichange-blue text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">3</div>
+                            <div>
+                                <h4 class="font-semibold izichange-blue">Mois 5-6: Diagnostic</h4>
+                                <p class="text-gray-700 text-sm">Outils diagnostic connectés + Historique véhicules</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cabinet Médical -->
+                <div class="card-shadow bg-white rounded-lg p-8">
+                    <h3 class="text-2xl font-semibold mb-6 izichange-orange">
+                        <i class="fas fa-user-md mr-3"></i>Cabinet Médical
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-izichange-blue text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">1</div>
+                            <div>
+                                <h4 class="font-semibold izichange-blue">Mois 1-2: Prise de RDV</h4>
+                                <p class="text-gray-700 text-sm">Doctolib + Rappels automatiques + RGPD</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-izichange-blue text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">2</div>
+                            <div>
+                                <h4 class="font-semibold izichange-blue">Mois 3-4: Dossiers Patients</h4>
+                                <p class="text-gray-700 text-sm">Logiciel métier + Sauvegarde sécurisée</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-izichange-blue text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">3</div>
+                            <div>
+                                <h4 class="font-semibold izichange-blue">Mois 5-6: Téléconsultation</h4>
+                                <p class="text-gray-700 text-sm">Plateforme vidéo + Prescriptions électroniques</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accompagnement iZiChange -->
+    <section class="py-16 izichange-header">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-6 text-white">
+                    iZiChange : Votre Partenaire Digitalisation en Occitanie
+                </h2>
+                <p class="text-xl text-gray-200 max-w-4xl mx-auto">
+                    Accompagnement pragmatique et sur-mesure pour les TPE-PME qui veulent réussir 
+                    leur transformation digitale avec des résultats mesurables
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white rounded-lg p-8 text-center card-shadow">
+                    <div class="tool-icon bg-gradient-to-br from-orange-400 to-orange-600 mx-auto mb-6">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 izichange-blue">Diagnostic Gratuit</h3>
+                    <p class="text-gray-700 mb-4">
+                        Audit complet de votre maturité digitale et identification des opportunités prioritaires
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li><i class="fas fa-check izichange-orange mr-2"></i>Analyse des processus actuels</li>
+                        <li><i class="fas fa-check izichange-orange mr-2"></i>Benchmark sectoriel</li>
+                        <li><i class="fas fa-check izichange-orange mr-2"></i>Plan d'action personnalisé</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white rounded-lg p-8 text-center card-shadow">
+                    <div class="tool-icon bg-gradient-to-br from-orange-400 to-orange-600 mx-auto mb-6">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 izichange-blue">Mise en Œuvre Rapide</h3>
+                    <p class="text-gray-700 mb-4">
+                        Déploiement en 30-90 jours avec formation des équipes et transfert de compétences
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li><i class="fas fa-check izichange-orange mr-2"></i>Sélection des meilleurs outils</li>
+                        <li><i class="fas fa-check izichange-orange mr-2"></i>Configuration sur-mesure</li>
+                        <li><i class="fas fa-check izichange-orange mr-2"></i>Formation pratique équipes</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white rounded-lg p-8 text-center card-shadow">
+                    <div class="tool-icon bg-gradient-to-br from-orange-400 to-orange-600 mx-auto mb-6">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 izichange-blue">ROI Garanti</h3>
+                    <p class="text-gray-700 mb-4">
+                        Suivi des résultats avec KPIs mesurables et engagement sur le retour sur investissement
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li><i class="fas fa-check izichange-orange mr-2"></i>Indicateurs de performance</li>
+                        <li><i class="fas fa-check izichange-orange mr-2"></i>Reporting mensuel</li>
+                        <li><i class="fas fa-check izichange-orange mr-2"></i>Optimisation continue</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <h3 class="text-2xl font-semibold mb-6 text-white">
+                    Nos Références en Occitanie
+                </h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                    <div class="bg-white rounded-lg p-6">
+                        <h4 class="font-semibold izichange-blue mb-2">Cabinet MediSafe - Toulouse</h4>
+                        <p class="text-sm text-gray-700 mb-3">
+                            Digitalisation complète : +30% de patients, -50% temps administratif
+                        </p>
+                        <div class="text-2xl font-bold izichange-orange">ROI 6 mois</div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6">
+                        <h4 class="font-semibold izichange-blue mb-2">Garage TechAuto - Montpellier</h4>
+                        <p class="text-sm text-gray-700 mb-3">
+                            Gestion client digitale : +25% de fidélisation, +40% efficacité
+                        </p>
+                        <div class="text-2xl font-bold izichange-orange">ROI 4 mois</div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6">
+                        <h4 class="font-semibold izichange-blue mb-2">PME InnoMétal - Nîmes</h4>
+                        <p class="text-sm text-gray-700 mb-3">
+                            ERP + GMAO : -35% coûts production, +20% qualité
+                        </p>
+                        <div class="text-2xl font-bold izichange-orange">ROI 8 mois</div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg p-8 max-w-2xl mx-auto">
+                    <h3 class="text-xl font-semibold mb-4 izichange-blue">Prêt à Digitaliser Votre Entreprise ?</h3>
+                    <p class="text-gray-700 mb-6">
+                        Contactez-nous pour un diagnostic gratuit et découvrez comment la transformation digitale 
+                        peut booster votre activité dès les premiers mois.
+                    </p>
+                    <div class="flex flex-col md:flex-row gap-4 justify-center">
+                        <a href="mailto:contact@izichange.fr" class="cta-button text-center">
+                            <i class="fas fa-envelope mr-2"></i>Diagnostic Gratuit
+                        </a>
+                        <a href="tel:+33686846429" class="bg-white text-gray-800 border-2 border-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-all">
+                            <i class="fas fa-phone mr-2"></i>06 86 84 64 29
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sources et Références -->
+    <footer class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h3 class="text-xl font-semibold mb-6 izichange-blue text-center">
+                Sources Officielles et Références
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+                <div>
+                    <h4 class="font-semibold mb-2 izichange-orange">Données Statistiques</h4>
+                    <ul class="space-y-1 text-gray-600">
+                        <li><a href="https://www.insee.fr/fr/statistiques/8604126" class="hover:text-blue-600">INSEE - TIC Entreprises 2024</a></li>
+                        <li><a href="https://www.entreprises.gouv.fr/la-dge/actualites/publication-du-barometre-2024" class="hover:text-blue-600">France Num - Baromètre 2024</a></li>
+                        <li><a href="https://lelab.bpifrance.fr" class="hover:text-blue-600">Bpifrance Le Lab - Études TPE-PME</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-2 izichange-orange">Études Sectorielles</h4>
+                    <ul class="space-y-1 text-gray-600">
+                        <li>Observatoire de la transformation digitale</li>
+                        <li>CCI France - Enquêtes régionales</li>
+                        <li>CPME - Baromètre digitalisation</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-2 izichange-orange">Expertise iZiChange</h4>
+                    <ul class="space-y-1 text-gray-600">
+                        <li>+100 projets digitaux accompagnés</li>
+                        <li>Retours d'expérience clients Occitanie</li>
+                        <li>Veille technologique continue</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-200 mt-8 pt-8 text-center text-gray-600">
+                <div class="flex items-center justify-center space-x-2 mb-4">
+                    <i class="fas fa-rocket text-2xl izichange-orange"></i>
+                    <span class="text-xl font-bold">
+                        <span class="izichange-orange">iZi</span><span class="izichange-blue">Change</span>
+                    </span>
+                </div>
+                <p class="mb-2">Transformation & Innovation made easy</p>
+                <p class="text-sm">
+                    <a href="mailto:contact@izichange.fr" class="izichange-orange hover:underline">contact@izichange.fr</a>
+                    | <a href="tel:+33686846429" class="izichange-orange hover:underline">06 86 84 64 29</a>
+                </p>
+                <p class="text-xs mt-4">© 2025 iZiChange - Expertise Digitalisation TPE-PME Occitanie</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDi4ri5cJqfZaygXTis5XaTsLJsOPLR7gasJJbiRX9JFJhz7NBjRySYemPqkl6EDwcpJEH3LM4oKi0odOkYy5WrsRrL8F%2FTVBOsdj6HvKmlmQ%2BlSOKa5N77Ddjxd6JTn9%2B5yY9DVMUFbrkZjHtBsakCkeNGaQ9naMRegVIslZVblhpZd8p9pFfvtYqtuHC8p%2Fc1tX7Q3IeCSy5pPtly%2BfvtyfaNy5oQROM1zko8BVpxC6H%2F8Q%2BBOgAmDfwdxLhpuIjvnMfT8j5%2FufiSn3mYhT7EgmvKETK4JtbowhuAqw8oHsZw1Rd8jfQlHtV0bqNNFo5sqoT1%2BMpt%2FlfZD%2Fyah8VyE3dcSVVzsGxEIFRhxBQYcb4%2BmpkpssJ%2BlF2oV9ZA52uEzitrgSN84LnwYR9UqtyZ%2BcQudAWBnRTYpnSkS%2BenI9C51UqzghIxxqVkPQJhy7O6YPWmLwR0C0tR928MnU9NnH%2BQWhzCMM1Qnt%2BktU9WQAxcS0DleK3eRk6j0BYvJEY0FhFLFalGvXy8cJGYPfJORU%2FxP8zzjB9uL8X%2Bxj%2BVSn";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDi4ri5cJqfZaygXTis5XaTsLJsOPLR7gasJJbiRX9JFJhz7NBjRySYemPqkl6EDwcpJEH3LM4oKi0odOkYy5WrsRrL8F/TVBOsdj6HvKmlmQ+lSOKa5N77Ddjxd6JTn9+5yY9DVMUFbrkZjHtBsakCkeNGaQ9naMRegVIslZVblhpZd8p9pFfvtYqtuHC8p/c1tX7Q3IeCSy5pPtly+fvtyfaNy5oQROM1zko8BVpxC6H/8Q+BOgAmDfwdxLhpuIjvnMfT8j5/ufiSn3mYhT7EgmvKETK4JtbowhuAqw8oHsZw1Rd8jfQlHtV0bqNNFo5sqoT1+Mpt/lfZD/yah8VyE3dcSVVzsGxEIFRhxBQYcb4+mpkpssJ+lF2oV9ZA52uEzitrgSN84LnwYR9UqtyZ+cQudAWBnRTYpnSkS+enI9C51UqzghIxxqVkPQJhy7O6YPWmLwR0C0tR928MnU9NnH+QWhzCMM1Qnt+ktU9WQAxcS0DleK3eRk6j0BYvJEY0FhFLFalGvXy8cJGYPfJORU/xP8zzjB9uL8X+xj+VSn";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    
