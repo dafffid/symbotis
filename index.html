@@ -4,525 +4,928 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iZiChange - Transformation & Innovation</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
-            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        
-        .premium-gradient {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 50%, #1e40af 100%);
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
         }
-        
-        .subtle-gradient {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-        }
-        
-        .orange-accent {
-            color: #ea580c;
-        }
-        
-        .blue-accent {
-            color: #1e40af;
-        }
-        
-        .premium-title {
-            color: #1e293b;
-            font-weight: 700;
-        }
-        
-        .premium-subtitle {
-            color: #334155;
-            font-weight: 600;
-        }
-        
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        
-        .nav-link {
-            transition: all 0.3s ease;
-            position: relative;
-        }
-        
-        .nav-link:hover {
-            color: #ea580c;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #ea580c;
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover::after {
+
+        /* Header and Navigation */
+        .header {
+            background: #4a5ba6;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
             width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        
-        .hero-animation {
-            animation: fadeInUp 1s ease-out;
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
         }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ff8c42;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 120px 2rem 80px;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-logo {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #ff8c42;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            color: #4a5ba6;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            line-height: 1.2;
+        }
+
+        .tech-icons {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-bottom: 2rem;
+        }
+
+        .tech-item {
+            text-align: center;
+            color: #666;
+        }
+
+        .tech-item i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #ff8c42;
+        }
+
+        .tech-item.cyber i { color: #4a5ba6; }
+        .tech-item.blockchain i { color: #ff6b35; }
+        .tech-item.quantum i { color: #5d4e75; }
+
+        /* Sections */
+        .section {
+            padding: 80px 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        .mission-content {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .mission-text {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+
+        .mission-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .mission-item {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .mission-item i {
+            font-size: 3rem;
+            color: #ff8c42;
+            margin-bottom: 1rem;
+        }
+
+        .mission-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .mission-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .quote {
+            text-align: center;
+            font-style: italic;
+            font-size: 1.3rem;
+            color: #4a5ba6;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-left: 4px solid #ff8c42;
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-top: 4px solid #ff8c42;
+        }
+
+        .service-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .service-card i {
+            font-size: 1.5rem;
+            color: #ff8c42;
+        }
+
+        .service-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .service-card li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #666;
+        }
+
+        .service-card li:before {
+            content: "•";
+            color: #ff8c42;
+            position: absolute;
+            left: 0;
+        }
+
+        .orientation-results {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .orientation-results h4 {
+            color: #333;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .orientation-results i {
+            color: #ff8c42;
+            font-size: 1.5rem;
+        }
+
+        /* Process */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .process-number {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .process-step:nth-child(1) .process-number { color: #ff8c42; }
+        .process-step:nth-child(2) .process-number { color: #4a5ba6; }
+        .process-step:nth-child(3) .process-number { color: #ff6b35; }
+        .process-step:nth-child(4) .process-number { color: #5d4e75; }
+
+        .process-step h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .process-step p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .process-footer {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .process-footer h4 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        /* Expertise */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .expertise-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .expertise-card h3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .expertise-card i {
+            font-size: 2rem;
+        }
+
+        .ai-card i { color: #ff8c42; }
+        .cyber-card i { color: #4a5ba6; }
+        .blockchain-card i { color: #ff6b35; }
+        .quantum-card i { color: #5d4e75; }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .tech-tag {
+            background: #f8f9fa;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Team */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .team-member {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .team-member h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member .role {
+            color: #ff8c42;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .team-member h4 {
+            color: #4a5ba6;
+            margin: 1rem 0 0.5rem;
+        }
+
+        .team-member ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .team-member li {
+            margin-bottom: 0.3rem;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #666;
+        }
+
+        .team-member li:before {
+            content: "•";
+            color: #ff8c42;
+            position: absolute;
+            left: 0;
+        }
+
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        .skill-tag {
+            background: #4a5ba6;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 4px solid #ff8c42;
+        }
+
+        .testimonial h3 {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .testimonial i {
+            font-size: 1.5rem;
+        }
+
+        .medisafe i { color: #ff8c42; }
+        .technofab i { color: #4a5ba6; }
+        .finsecure i { color: #ff6b35; }
+
+        .testimonial p {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .benefits {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .benefit {
+            background: #e8f5e8;
+            color: #2e7d32;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .clients-benefits {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .clients-benefits h4 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .clients-benefits i {
+            color: #ff8c42;
+            font-size: 1.5rem;
+        }
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-item {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .contact-item h3 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item a {
+            color: #4a5ba6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-item a:hover {
+            color: #ff8c42;
+        }
+
+        .cta {
+            text-align: center;
+            background: linear-gradient(135deg, #4a5ba6 0%, #ff8c42 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            margin-top: 3rem;
+        }
+
+        .cta h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #4a5ba6;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: transform 0.3s;
+            border-bottom: 3px solid #ff8c42;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .tech-icons {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .section {
+                padding: 60px 1rem;
             }
         }
-        
-        .logo-glow {
-            filter: drop-shadow(0 4px 20px rgba(234, 88, 12, 0.3));
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Section spacing for fixed header */
+        .section {
+            scroll-margin-top: 80px;
         }
     </style>
 </head>
-<body class="bg-white">
-    <!-- Header Navigation -->
-    <nav class="premium-gradient shadow-lg sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex-shrink-0">
-                    <span class="text-white text-xl font-bold">iZiChange</span>
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#accueil" class="text-white nav-link px-3 py-2 text-sm font-medium">Accueil</a>
-                        <a href="#services" class="text-white nav-link px-3 py-2 text-sm font-medium">Services</a>
-                        <a href="#processus" class="text-white nav-link px-3 py-2 text-sm font-medium">Processus</a>
-                        <a href="#expertise" class="text-white nav-link px-3 py-2 text-sm font-medium">Expertise</a>
-                        <a href="#equipe" class="text-white nav-link px-3 py-2 text-sm font-medium">Équipe</a>
-                        <a href="#testimonials" class="text-white nav-link px-3 py-2 text-sm font-medium">Témoignages</a>
-                        <a href="#contact" class="text-white nav-link px-3 py-2 text-sm font-medium">Contact</a>
-                        <span class="text-gray-300 px-3 py-2 text-sm font-medium">Blog <small>(En construction)</small></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#accueil" class="logo">iZiChange</a>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#processus">Processus</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#equipe">Équipe</a></li>
+                <li><a href="#temoignages">Témoignages</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="Blog1.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section id="accueil" class="min-h-screen flex items-center justify-center subtle-gradient">
-        <div class="text-center hero-animation">
-            <div class="mb-8">
-                <h1 class="text-6xl font-bold orange-accent mb-4 logo-glow">iZiChange</h1>
-                <p class="text-xl text-gray-600 mb-8">Transformation & Innovation made easy</p>
+    <section id="accueil" class="hero">
+        <div class="hero-logo">iZiChange</div>
+        <div class="hero-subtitle">Transformation & Innovation made easy</div>
+        <h1 class="hero-title">
+            Gains et économies directes sur vos process et ressources grâce à l'adoption des nouvelles technologies
+        </h1>
+        <div class="tech-icons">
+            <div class="tech-item ai">
+                <i class="fas fa-brain"></i>
+                <div>Intelligence Artificielle</div>
             </div>
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold premium-title mb-6">
-                    Gains et économies directes sur vos process et ressources grâce à l'adoption des nouvelles technologies
-                </h2>
-                <div class="flex justify-center space-x-8 mt-8">
-                    <div class="text-center">
-                        <i class="fas fa-brain text-4xl orange-accent mb-2"></i>
-                        <p class="font-semibold text-gray-700">Intelligence Artificielle</p>
-                    </div>
-                    <div class="text-center">
-                        <i class="fas fa-shield-alt text-4xl blue-accent mb-2"></i>
-                        <p class="font-semibold text-gray-700">Cybersécurité</p>
-                    </div>
-                    <div class="text-center">
-                        <i class="fas fa-link text-4xl orange-accent mb-2"></i>
-                        <p class="font-semibold text-gray-700">Blockchain</p>
-                    </div>
-                    <div class="text-center">
-                        <i class="fas fa-atom text-4xl blue-accent mb-2"></i>
-                        <p class="font-semibold text-gray-700">Post-Quantum</p>
-                    </div>
-                </div>
+            <div class="tech-item cyber">
+                <i class="fas fa-shield-alt"></i>
+                <div>Cybersécurité</div>
+            </div>
+            <div class="tech-item blockchain">
+                <i class="fas fa-link"></i>
+                <div>Blockchain</div>
+            </div>
+            <div class="tech-item quantum">
+                <i class="fas fa-atom"></i>
+                <div>Post-Quantum</div>
             </div>
         </div>
     </section>
 
     <!-- Mission Section -->
-    <section id="mission" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold premium-title mb-6">Notre Mission</h2>
-                <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                    iZiChange accompagne les organisations de toutes tailles dans leur transformation digitale et l'adoption des technologies de pointe avec une approche pragmatique et orientée résultats.
-                </p>
+    <section id="mission" class="section">
+        <h2 class="section-title">Notre Mission</h2>
+        <div class="mission-content">
+            <p class="mission-text">
+                iZiChange accompagne les organisations de toutes tailles dans leur transformation digitale et l'adoption des technologies de pointe avec une approche pragmatique et orientée résultats.
+            </p>
+        </div>
+        
+        <div class="mission-items">
+            <div class="mission-item">
+                <i class="fas fa-bullseye"></i>
+                <h3>Objectif</h3>
+                <p>Rendre la transformation technologique accessible, rentable et sécurisée</p>
             </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center p-6">
-                    <i class="fas fa-target text-4xl orange-accent mb-4"></i>
-                    <h3 class="text-xl font-bold premium-subtitle mb-3">Objectif</h3>
-                    <p class="text-gray-600">Rendre la transformation technologique accessible, rentable et sécurisée</p>
-                </div>
-                <div class="text-center p-6">
-                    <i class="fas fa-users text-4xl blue-accent mb-4"></i>
-                    <h3 class="text-xl font-bold premium-subtitle mb-3">Pour qui</h3>
-                    <p class="text-gray-600">Du cabinet d'anesthésie traitant plus de 50 patients par jour à l'entreprise de +5000 salariés</p>
-                </div>
-                <div class="text-center p-6">
-                    <i class="fas fa-rocket text-4xl orange-accent mb-4"></i>
-                    <h3 class="text-xl font-bold premium-subtitle mb-3">Approche</h3>
-                    <p class="text-gray-600">Solutions faciles à déployer avec une belle rentabilité opérationnelle</p>
-                </div>
+            <div class="mission-item">
+                <i class="fas fa-users"></i>
+                <h3>Pour qui</h3>
+                <p>Du cabinet d'anesthésie traitant plus de 50 patients par jour à l'entreprise de +5000 salariés</p>
             </div>
-            
-            <div class="text-center mt-12">
-                <blockquote class="text-2xl font-medium text-gray-700 italic">
-                    "Rendre l'innovation technologique accessible et sécurisée pour tous"
-                </blockquote>
+            <div class="mission-item">
+                <i class="fas fa-rocket"></i>
+                <h3>Approche</h3>
+                <p>Solutions faciles à déployer avec une belle rentabilité opérationnelle</p>
             </div>
+        </div>
+
+        <div class="quote">
+            "Rendre l'innovation technologique accessible et sécurisée pour tous"
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 subtle-gradient">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold premium-title mb-6">Nos Services</h2>
+    <section id="services" class="section">
+        <h2 class="section-title">Nos Services</h2>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <h3><i class="fas fa-chart-line"></i> Optimisation Stratégique</h3>
+                <ul>
+                    <li>Identification et optimisation des leviers de croissance</li>
+                    <li>Conception de KPIs mesurables et gouvernance</li>
+                    <li>Alignement personnes, processus et technologie</li>
+                </ul>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
-                    <h3 class="text-2xl font-bold premium-subtitle mb-4">Optimisation Stratégique</h3>
-                    <ul class="space-y-3 text-gray-600">
-                        <li>• Identification et optimisation des leviers de croissance</li>
-                        <li>• Conception de KPIs mesurables et gouvernance</li>
-                        <li>• Alignement personnes, processus et technologie</li>
-                    </ul>
-                </div>
-                
-                <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
-                    <h3 class="text-2xl font-bold premium-subtitle mb-4">Automatisation Raisonnée</h3>
-                    <ul class="space-y-3 text-gray-600">
-                        <li>• Automatisation ciblée avec ROI clair</li>
-                        <li>• Productivité accrue en préservant la valeur humaine</li>
-                        <li>• Intégration sécurisée dans les systèmes existants</li>
-                    </ul>
-                </div>
-                
-                <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
-                    <h3 class="text-2xl font-bold premium-subtitle mb-4">Sécurité & Confiance</h3>
-                    <ul class="space-y-3 text-gray-600">
-                        <li>• Cybersécurité assistée par IA et playbooks</li>
-                        <li>• Identité, authentification et traçabilité blockchain</li>
-                        <li>• Feuille de route PQC contre les risques quantiques</li>
-                    </ul>
-                </div>
+            <div class="service-card">
+                <h3><i class="fas fa-cogs"></i> Automatisation Raisonnée</h3>
+                <ul>
+                    <li>Automatisation ciblée avec ROI clair</li>
+                    <li>Productivité accrue en préservant la valeur humaine</li>
+                    <li>Intégration sécurisée dans les systèmes existants</li>
+                </ul>
             </div>
             
-            <div class="text-center mt-12">
-                <div class="bg-white p-6 rounded-xl shadow-lg inline-block">
-                    <h4 class="text-xl font-bold premium-subtitle mb-3">Orientation Résultats</h4>
-                    <p class="text-gray-600">Résultats rapides en 30-90 jours • Changement durable • Reporting adapté aux décideurs</p>
-                </div>
+            <div class="service-card">
+                <h3><i class="fas fa-lock"></i> Sécurité & Confiance</h3>
+                <ul>
+                    <li>Cybersécurité assistée par IA et playbooks</li>
+                    <li>Identité, authentification et traçabilité blockchain</li>
+                    <li>Feuille de route PQC contre les risques quantiques</li>
+                </ul>
             </div>
+        </div>
+
+        <div class="orientation-results">
+            <h4><i class="fas fa-target"></i> Orientation Résultats</h4>
+            <p>Résultats rapides en 30-90 jours • Changement durable • Reporting adapté aux décideurs</p>
+        </div>
+
+        <div class="quote">
+            "Des services adaptés à vos besoins pour une transformation sur mesure"
         </div>
     </section>
 
     <!-- Process Section -->
-    <section id="processus" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold premium-title mb-6">Notre Processus</h2>
+    <section id="processus" class="section">
+        <h2 class="section-title">Notre Processus</h2>
+        
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="process-number">1</div>
+                <h3>Diagnostic & Découverte</h3>
+                <p>Analyse de l'existant et identification des opportunités d'amélioration</p>
             </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center p-6">
-                    <div class="text-5xl font-bold orange-accent mb-4">1</div>
-                    <h3 class="text-xl font-bold premium-subtitle mb-3">Diagnostic & Découverte</h3>
-                    <p class="text-gray-600">Analyse de l'existant et identification des opportunités d'amélioration</p>
-                </div>
-                
-                <div class="text-center p-6">
-                    <div class="text-5xl font-bold blue-accent mb-4">2</div>
-                    <h3 class="text-xl font-bold premium-subtitle mb-3">Évaluation Stratégique</h3>
-                    <p class="text-gray-600">Définition des priorités et des leviers de performance à activer</p>
-                </div>
-                
-                <div class="text-center p-6">
-                    <div class="text-5xl font-bold orange-accent mb-4">3</div>
-                    <h3 class="text-xl font-bold premium-subtitle mb-3">Feuille de Route</h3>
-                    <p class="text-gray-600">Plan d'action adapté à vos besoins, objectifs et contraintes spécifiques</p>
-                </div>
-                
-                <div class="text-center p-6">
-                    <div class="text-5xl font-bold blue-accent mb-4">4</div>
-                    <h3 class="text-xl font-bold premium-subtitle mb-3">Implémentation</h3>
-                    <p class="text-gray-600">Déploiement structuré des solutions avec mesure continue des résultats</p>
-                </div>
+            <div class="process-step">
+                <div class="process-number">2</div>
+                <h3>Évaluation Stratégique</h3>
+                <p>Définition des priorités et des leviers de performance à activer</p>
             </div>
             
-            <div class="text-center mt-12">
-                <div class="bg-gray-50 p-6 rounded-xl">
-                    <h4 class="text-xl font-bold premium-subtitle mb-3">Accompagnement Continu</h4>
-                    <p class="text-gray-600">Support continu et transfert de compétences • Rapidité (30-90 jours) • Mesurabilité (KPIs clairs, reporting adapté)</p>
-                </div>
+            <div class="process-step">
+                <div class="process-number">3</div>
+                <h3>Feuille de Route</h3>
+                <p>Plan d'action adapté à vos besoins, objectifs et contraintes spécifiques</p>
             </div>
+            
+            <div class="process-step">
+                <div class="process-number">4</div>
+                <h3>Implémentation</h3>
+                <p>Déploiement structuré des solutions avec mesure continue des résultats</p>
+            </div>
+        </div>
+
+        <div class="process-footer">
+            <h4>Accompagnement Continu</h4>
+            <p>Support continu et transfert de compétences • Rapidité (30-90 jours) • Mesurabilité (KPIs clairs, reporting adapté)</p>
         </div>
     </section>
 
     <!-- Expertise Section -->
-    <section id="expertise" class="py-20 subtle-gradient">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold premium-title mb-6">Expertise Technologique</h2>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-6 rounded-xl shadow-lg card-hover text-center">
-                    <i class="fas fa-brain text-4xl orange-accent mb-4"></i>
-                    <h3 class="text-xl font-bold premium-subtitle mb-3">Intelligence Artificielle</h3>
-                    <p class="text-gray-600 text-sm">Intégration intelligente selon contexte business, automatisation, aide à la décision</p>
-                    <div class="mt-4 space-y-1 text-xs text-gray-500">
-                        <span class="inline-block bg-orange-100 text-orange-800 px-2 py-1 rounded">LLM</span>
-                        <span class="inline-block bg-orange-100 text-orange-800 px-2 py-1 rounded">Machine Learning</span>
-                        <span class="inline-block bg-orange-100 text-orange-800 px-2 py-1 rounded">Computer Vision</span>
-                    </div>
-                </div>
-                
-                <div class="bg-white p-6 rounded-xl shadow-lg card-hover text-center">
-                    <i class="fas fa-shield-alt text-4xl blue-accent mb-4"></i>
-                    <h3 class="text-xl font-bold premium-subtitle mb-3">Cybersécurité</h3>
-                    <p class="text-gray-600 text-sm">Protection des systèmes et données, analyse vulnérabilités</p>
-                    <div class="mt-4 space-y-1 text-xs text-gray-500">
-                        <span class="inline-block bg-blue-100 text-blue-800 px-2 py-1 rounded">Sécurité Cloud</span>
-                        <span class="inline-block bg-blue-100 text-blue-800 px-2 py-1 rounded">Audit</span>
-                        <span class="inline-block bg-blue-100 text-blue-800 px-2 py-1 rounded">SOC</span>
-                    </div>
-                </div>
-                
-                <div class="bg-white p-6 rounded-xl shadow-lg card-hover text-center">
-                    <i class="fas fa-link text-4xl orange-accent mb-4"></i>
-                    <h3 class="text-xl font-bold premium-subtitle mb-3">Blockchain</h3>
-                    <p class="text-gray-600 text-sm">Traçabilité, immuabilité, applications métiers</p>
-                    <div class="mt-4 space-y-1 text-xs text-gray-500">
-                        <span class="inline-block bg-orange-100 text-orange-800 px-2 py-1 rounded">Smart Contracts</span>
-                        <span class="inline-block bg-orange-100 text-orange-800 px-2 py-1 rounded">Tokenisation</span>
-                        <span class="inline-block bg-orange-100 text-orange-800 px-2 py-1 rounded">Supply Chain</span>
-                    </div>
-                </div>
-                
-                <div class="bg-white p-6 rounded-xl shadow-lg card-hover text-center">
-                    <i class="fas fa-atom text-4xl blue-accent mb-4"></i>
-                    <h3 class="text-xl font-bold premium-subtitle mb-3">Post-Quantum</h3>
-                    <p class="text-gray-600 text-sm">Préparation à la menace quantique, cryptographie résistante</p>
-                    <div class="mt-4 space-y-1 text-xs text-gray-500">
-                        <span class="inline-block bg-blue-100 text-blue-800 px-2 py-1 rounded">Cryptographie PQC</span>
-                        <span class="inline-block bg-blue-100 text-blue-800 px-2 py-1 rounded">NIST Standards</span>
-                        <span class="inline-block bg-blue-100 text-blue-800 px-2 py-1 rounded">Sécurité Future</span>
-                    </div>
+    <section id="expertise" class="section">
+        <h2 class="section-title">Expertise Technologique</h2>
+        
+        <div class="expertise-grid">
+            <div class="expertise-card ai-card">
+                <h3><i class="fas fa-brain"></i> Intelligence Artificielle</h3>
+                <p>Intégration intelligente selon contexte business, automatisation, aide à la décision</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">LLM</span>
+                    <span class="tech-tag">Machine Learning</span>
+                    <span class="tech-tag">Computer Vision</span>
                 </div>
             </div>
             
-            <div class="text-center mt-12">
-                <blockquote class="text-xl font-medium text-gray-700 italic">
-                    "Nos experts combinent ces technologies pour préparer votre entreprise aux défis de demain tout en apportant de la valeur immédiate."
-                </blockquote>
+            <div class="expertise-card cyber-card">
+                <h3><i class="fas fa-shield-alt"></i> Cybersécurité</h3>
+                <p>Protection des systèmes et données, analyse vulnérabilités</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Sécurité Cloud</span>
+                    <span class="tech-tag">Audit</span>
+                    <span class="tech-tag">SOC</span>
+                </div>
             </div>
+            
+            <div class="expertise-card blockchain-card">
+                <h3><i class="fas fa-link"></i> Blockchain</h3>
+                <p>Traçabilité, immuabilité, applications métiers</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Smart Contracts</span>
+                    <span class="tech-tag">Tokenisation</span>
+                    <span class="tech-tag">Supply Chain</span>
+                </div>
+            </div>
+            
+            <div class="expertise-card quantum-card">
+                <h3><i class="fas fa-atom"></i> Post-Quantum</h3>
+                <p>Préparation à la menace quantique, cryptographie résistante</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Cryptographie PQC</span>
+                    <span class="tech-tag">NIST Standards</span>
+                    <span class="tech-tag">Sécurité Future</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="quote">
+            "Nos experts combinent ces technologies pour préparer votre entreprise aux défis de demain tout en apportant de la valeur immédiate."
         </div>
     </section>
 
     <!-- Team Section -->
-    <section id="equipe" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold premium-title mb-6">Équipe Dirigeante</h2>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="text-center">
-                    <div class="mb-6">
-                        <h3 class="text-2xl font-bold premium-title mb-2">David Servais</h3>
-                        <p class="text-lg orange-accent font-semibold">Digital Transformation & Business Developer</p>
-                    </div>
-                    <div class="text-left bg-gray-50 p-6 rounded-xl">
-                        <h4 class="font-bold premium-subtitle mb-3">Expérience :</h4>
-                        <ul class="space-y-2 text-gray-600 text-sm">
-                            <li>• Business developer director chez XRPL</li>
-                            <li>• Innovation chez Thales</li>
-                            <li>• Project Manager Airbus</li>
-                            <li>• Consultant start-ups</li>
-                            <li>• Création des modules d'IA à AMADEUS</li>
-                        </ul>
-                        <h4 class="font-bold premium-subtitle mt-4 mb-3">Formation :</h4>
-                        <p class="text-gray-600 text-sm">Business School HEC Paris 2010 • Ingénieur ESSTIN 2003</p>
-                    </div>
-                </div>
+    <section id="equipe" class="section">
+        <h2 class="section-title">Équipe Dirigeante</h2>
+        
+        <div class="team-grid">
+            <div class="team-member">
+                <h3>David Servais</h3>
+                <div class="role">Digital Transformation & Business Developer</div>
                 
-                <div class="text-center">
-                    <div class="mb-6">
-                        <h3 class="text-2xl font-bold premium-title mb-2">Vincent Mijoule</h3>
-                        <p class="text-lg blue-accent font-semibold">Polytechnicien & Tech Entrepreneur</p>
-                    </div>
-                    <div class="text-left bg-gray-50 p-6 rounded-xl">
-                        <h4 class="font-bold premium-subtitle mb-3">Expérience :</h4>
-                        <ul class="space-y-2 text-gray-600 text-sm">
-                            <li>• Président Duluth Technologies</li>
-                            <li>• Liquidator DTC Investments</li>
-                            <li>• Consultant systèmes IT</li>
-                        </ul>
-                        <h4 class="font-bold premium-subtitle mt-4 mb-3">Formation :</h4>
-                        <p class="text-gray-600 text-sm">École Polytechnique 2000-2003</p>
-                    </div>
-                </div>
+                <h4>Expérience :</h4>
+                <ul>
+                    <li>Business developer director chez XRPL</li>
+                    <li>Innovation chez Thales et Airbus</li>
+                    <li>Consultant start-ups</li>
+                </ul>
+                
+                <h4>Formation :</h4>
+                <p>Business School HEC Paris 2010 • Ingénieur ESSTIN 2003</p>
             </div>
             
-            <div class="text-center mt-12">
-                <div class="bg-gray-50 p-6 rounded-xl">
-                    <h4 class="text-xl font-bold premium-subtitle mb-3">Compétences Clés</h4>
-                    <div class="flex flex-wrap justify-center gap-2">
-                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Stratégie</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">IA</span>
-                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Cybersécurité</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Blockchain</span>
-                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Ingénierie</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Machine Learning</span>
-                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Projets Complexes</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Post-Quantum</span>
-                    </div>
-                </div>
+            <div class="team-member">
+                <h3>Vincent Mijoule</h3>
+                <div class="role">Polytechnicien & Tech Entrepreneur</div>
+                
+                <h4>Expérience :</h4>
+                <ul>
+                    <li>Président Duluth Technologies</li>
+                    <li>Consultant systèmes IT</li>
+                    <li>Création des modules d'intelligence artificielle à AMADEUS</li>
+                </ul>
+                
+                <h4>Formation :</h4>
+                <p>École Polytechnique 2000-2003</p>
             </div>
-            
-            <div class="text-center mt-8">
-                <blockquote class="text-xl font-medium text-gray-700 italic">
-                    "Une expertise complémentaire pour accompagner votre transformation technologique."
-                </blockquote>
-            </div>
+        </div>
+
+        <div class="skills-tags">
+            <span class="skill-tag">Stratégie</span>
+            <span class="skill-tag">IA</span>
+            <span class="skill-tag">Cybersécurité</span>
+            <span class="skill-tag">Blockchain</span>
+            <span class="skill-tag">Ingénierie</span>
+            <span class="skill-tag">Machine Learning</span>
+            <span class="skill-tag">Projets Complexes</span>
+            <span class="skill-tag">Post-Quantum</span>
+        </div>
+
+        <div class="quote">
+            "Une expertise complémentaire pour accompagner votre transformation technologique."
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20 subtle-gradient">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold premium-title mb-6">Témoignages & Réussites</h2>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
-                    <h3 class="text-xl font-bold premium-subtitle mb-4">Cabinet d'Anesthésies MediSafe</h3>
-                    <p class="text-gray-600 mb-4">Sécurisation des dossiers patients, optimisation plannings (>50 patients/jour), conformité RGPD.</p>
-                    <div class="border-t pt-4">
-                        <span class="text-green-600 font-semibold">✓ Conformité RGPD</span>
-                    </div>
-                </div>
-                
-                <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
-                    <h3 class="text-xl font-bold premium-subtitle mb-4">TechnoFab Industries</h3>
-                    <p class="text-gray-600 mb-4">Automatisation des processus, ROI dès le 3ème mois, -40% de coûts opérationnels.</p>
-                    <div class="border-t pt-4">
-                        <span class="text-green-600 font-semibold">✓ ROI 3 mois</span><br>
-                        <span class="text-green-600 font-semibold">✓ -40% coûts</span>
-                    </div>
-                </div>
-                
-                <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
-                    <h3 class="text-xl font-bold premium-subtitle mb-4">FinSecure Banking</h3>
-                    <p class="text-gray-600 mb-4">Sécurisation transactions, préparation infrastructures post-quantiques, +30% d'efficacité.</p>
-                    <div class="border-t pt-4">
-                        <span class="text-green-600 font-semibold">✓ +30% efficacité</span><br>
-                        <span class="text-green-600 font-semibold">✓ 100% conformité PQC</span>
-                    </div>
+    <section id="temoignages" class="section">
+        <h2 class="section-title">Témoignages & Réussites</h2>
+        
+        <div class="testimonials-grid">
+            <div class="testimonial medisafe">
+                <h3><i class="fas fa-hospital"></i> Cabinet d'Anesthésies MediSafe</h3>
+                <p>Sécurisation des dossiers patients, optimisation plannings (>50 patients/jour), conformité RGPD.</p>
+                <div class="benefits">
+                    <span class="benefit"><i class="fas fa-check"></i> Conformité RGPD</span>
                 </div>
             </div>
             
-            <div class="text-center mt-12">
-                <div class="bg-white p-6 rounded-xl shadow-lg">
-                    <h4 class="text-xl font-bold premium-subtitle mb-3">Bénéfices Clients</h4>
-                    <p class="text-gray-600">ROI rapide 30-90j • Sécurité renforcée • Adoption utilisateur • Évolutivité</p>
+            <div class="testimonial technofab">
+                <h3><i class="fas fa-industry"></i> TechnoFab Industries</h3>
+                <p>Automatisation des processus, ROI dès le 3ème mois, -40% de coûts opérationnels.</p>
+                <div class="benefits">
+                    <span class="benefit"><i class="fas fa-check"></i> ROI 3 mois</span>
+                    <span class="benefit"><i class="fas fa-check"></i> -40% coûts</span>
                 </div>
             </div>
             
-            <div class="text-center mt-8">
-                <blockquote class="text-xl font-medium text-gray-700 italic">
-                    "Des solutions adaptées à chaque taille d'entreprise, avec des résultats mesurables."
-                </blockquote>
+            <div class="testimonial finsecure">
+                <h3><i class="fas fa-university"></i> FinSecure Banking</h3>
+                <p>Sécurisation transactions, préparation infrastructures post-quantiques, +30% d'efficacité.</p>
+                <div class="benefits">
+                    <span class="benefit"><i class="fas fa-check"></i> +30% efficacité</span>
+                    <span class="benefit"><i class="fas fa-check"></i> 100% conformité PQC</span>
+                </div>
             </div>
+        </div>
+
+        <div class="clients-benefits">
+            <h4><i class="fas fa-star"></i> Bénéfices Clients</h4>
+            <p>ROI rapide 30-90j • Sécurité renforcée • Adoption utilisateur • Évolutivité</p>
+        </div>
+
+        <div class="quote">
+            "Des solutions adaptées à chaque taille d'entreprise, avec des résultats mesurables."
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold premium-title mb-6">Votre Transformation Commence Ici</h2>
+    <section id="contact" class="section">
+        <h2 class="section-title">Votre Transformation Commence Ici</h2>
+        
+        <div class="contact-grid">
+            <div class="contact-item">
+                <h3>Email</h3>
+                <a href="mailto:contact@izichange.fr">contact@izichange.fr</a>
             </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center p-6">
-                    <i class="fas fa-envelope text-4xl orange-accent mb-4"></i>
-                    <h3 class="text-lg font-bold premium-subtitle mb-3">Email</h3>
-                    <p class="text-gray-600">contact@izichange.fr</p>
-                </div>
-                
-                <div class="text-center p-6">
-                    <i class="fas fa-calendar-alt text-4xl blue-accent mb-4"></i>
-                    <h3 class="text-lg font-bold premium-subtitle mb-3">Rendez-vous</h3>
-                    <p class="text-gray-600">Discutons de votre projet</p>
-                </div>
-                
-                <div class="text-center p-6">
-                    <i class="fab fa-linkedin text-4xl orange-accent mb-4"></i>
-                    <h3 class="text-lg font-bold premium-subtitle mb-3">LinkedIn</h3>
-                    <p class="text-gray-600">Suivez-nous sur LinkedIn</p>
-                </div>
-                
-                <div class="text-center p-6">
-                    <i class="fas fa-phone text-4xl blue-accent mb-4"></i>
-                    <h3 class="text-lg font-bold premium-subtitle mb-3">Téléphone</h3>
-                    <p class="text-gray-600">+33 (0)6 86 84 64 29</p>
-                </div>
+            <div class="contact-item">
+                <h3>Rendez-vous</h3>
+                <a href="#contact">Discutons de votre projet</a>
             </div>
             
-            <div class="text-center mt-12">
-                <div class="bg-gradient-to-r from-orange-500 to-blue-600 text-white p-8 rounded-xl">
-                    <h3 class="text-2xl font-bold mb-4">Prêt à transformer votre entreprise ?</h3>
-                    <p class="text-lg mb-6">Contactez-nous pour une consultation gratuite</p>
-                    <button class="bg-white text-gray-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
-                        Commencer maintenant
-                    </button>
-                </div>
+            <div class="contact-item">
+                <h3>LinkedIn</h3>
+                <a href="#linkedin">Suivez-nous sur LinkedIn</a>
             </div>
             
-            <div class="text-center mt-8">
-                <blockquote class="text-xl font-medium text-gray-700 italic">
-                    "Avec iZiChange, l'innovation IA-Cyber-Quantique devient accessible à tous, quelle que soit la taille de votre entreprise."
-                </blockquote>
+            <div class="contact-item">
+                <h3>Téléphone</h3>
+                <a href="tel:+33686846429">+33 (0)6 86 84 64 29</a>
             </div>
+        </div>
+
+        <div class="cta">
+            <h3>Prêt à transformer votre entreprise ?</h3>
+            <a href="mailto:contact@izichange.fr" class="cta-button">Prendre Rendez-vous</a>
+        </div>
+
+        <div class="quote">
+            "Avec iZiChange, l'innovation IA-Cyber-Quantique devient accessible à tous, quelle que soit la taille de votre entreprise."
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="premium-gradient text-white py-8">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <div class="mb-4">
-                <span class="text-2xl font-bold">iZiChange</span>
-            </div>
-            <p class="text-gray-300">Transformation & Innovation made easy</p>
-            <div class="mt-4 flex justify-center space-x-6">
-                <span>Intelligence Artificielle</span>
-                <span>•</span>
-                <span>Cybersécurité</span>
-                <span>•</span>
-                <span>Blockchain</span>
-                <span>•</span>
-                <span>Post-Quantum</span>
-            </div>
-            <div class="mt-6 text-sm text-gray-400">
-                © 2024 iZiChange. Tous droits réservés.
-            </div>
-        </div>
-    </footer>
 
     <script>
         // Smooth scrolling for navigation links
@@ -539,23 +942,24 @@
             });
         });
 
-        // Add active state to navigation
-        window.addEventListener('scroll', () => {
-            let current = '';
-            const sections = document.querySelectorAll('section');
+        // Add active class to navigation based on scroll position
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('.nav-links a');
             
+            let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
-                if (pageYOffset >= (sectionTop - 200)) {
+                if (scrollY >= (sectionTop - 200)) {
                     current = section.getAttribute('id');
                 }
             });
 
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('text-orange-500');
-                if (link.getAttribute('href') === '#' + current) {
-                    link.classList.add('text-orange-500');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
                 }
             });
         });
