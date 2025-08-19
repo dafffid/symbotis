@@ -108,21 +108,56 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
     </style>
-</head>
-<body class="bg-white">
-    
-    <!-- Header Navigation - position replaced for the seo and mobile menu-->
-    
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <title>iZiChange - Transformation Digitale & IA pour Entreprises | Consulting TPE PME</title>
-    <meta name="description" content="iZiChange accompagne les TPE, PME et grandes entreprises dans leur transformation digitale avec l'IA, cybersécurité et blockchain. ROI garanti 30-90 jours.">
-    <meta name="keywords" content="transformation digitale, intelligence artificielle, cybersécurité, blockchain, consulting, TPE, PME, automatisation, ROI">
-    <meta name="author" content="iZiChange">
-    <meta name="robots" content="index, follow">
+    <!-- Header Navigation -->
+    <nav class="premium-gradient shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <span class="text-white text-xl font-bold">iZiChange</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#accueil" class="text-white nav-link px-3 py-2 text-sm font-medium">Accueil</a>
+                        <a href="#services" class="text-white nav-link px-3 py-2 text-sm font-medium">Services</a>
+                        <a href="#processus" class="text-white nav-link px-3 py-2 text-sm font-medium">Processus</a>
+                        <a href="#expertise" class="text-white nav-link px-3 py-2 text-sm font-medium">Expertise</a>
+                        <a href="#equipe" class="text-white nav-link px-3 py-2 text-sm font-medium">Équipe</a>
+                        <a href="#testimonials" class="text-white nav-link px-3 py-2 text-sm font-medium">Témoignages</a>
+                        <a href="#contact" class="text-white nav-link px-3 py-2 text-sm font-medium">Contact</a>
+                        <a href="https://blog.izichange.fr" class="text-white nav-link px-3 py-2 text-sm font-medium">Blog</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-white hover:text-orange-300 focus:outline-none p-2">
+                        <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 premium-gradient border-t border-blue-600">
+                <a href="#accueil" class="text-white hover:text-orange-300 hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Accueil</a>
+                <a href="#services" class="text-white hover:text-orange-300 hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="#processus" class="text-white hover:text-orange-300 hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Processus</a>
+                <a href="#expertise" class="text-white hover:text-orange-300 hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Expertise</a>
+                <a href="#equipe" class="text-white hover:text-orange-300 hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Équipe</a>
+                <a href="#testimonials" class="text-white hover:text-orange-300 hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Témoignages</a>
+                <a href="#contact" class="text-white hover:text-orange-300 hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+                <a href="https://blog.izichange.fr" class="text-white hover:text-orange-300 hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Blog</a>
+            </div>
+        </div>
+    </nav>
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="iZiChange - Transformation Digitale & IA pour Entreprises">
@@ -188,33 +223,33 @@
     }
     </script>
 
-    <!-- Hero Section -->
-    <section id="accueil" class="min-h-screen flex items-center justify-center subtle-gradient">
-        <div class="text-center hero-animation">
+        <!-- Hero Section -->
+    <section id="accueil" class="min-h-screen flex items-center justify-center subtle-gradient px-4">
+        <div class="text-center hero-animation w-full max-w-6xl mx-auto">
             <div class="mb-8">
-                <h1 class="text-6xl font-bold orange-accent mb-4 logo-glow">iZiChange</h1>
-                <p class="text-xl text-gray-600 mb-8">Transformation & Innovation made easy</p>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold orange-accent mb-4 logo-glow">iZiChange</h1>
+                <p class="text-lg sm:text-xl text-gray-600 mb-8 px-4">Transformation & Innovation made easy</p>
             </div>
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold premium-title mb-6">
+            <div class="w-full">
+                <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold premium-title mb-6 px-4 leading-tight">
                     Gains et économies directes sur vos process et ressources grâce à l'adoption des nouvelles technologies
                 </h2>
-                <div class="flex justify-center space-x-8 mt-8">
+                <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mt-8 px-4">
                     <div class="text-center">
-                        <i class="fas fa-brain text-4xl orange-accent mb-2"></i>
-                        <p class="font-semibold text-gray-700">Intelligence Artificielle</p>
+                        <i class="fas fa-brain text-2xl sm:text-3xl lg:text-4xl orange-accent mb-2"></i>
+                        <p class="font-semibold text-gray-700 text-xs sm:text-sm lg:text-base">Intelligence Artificielle</p>
                     </div>
                     <div class="text-center">
-                        <i class="fas fa-shield-alt text-4xl blue-accent mb-2"></i>
-                        <p class="font-semibold text-gray-700">Cybersécurité</p>
+                        <i class="fas fa-shield-alt text-2xl sm:text-3xl lg:text-4xl blue-accent mb-2"></i>
+                        <p class="font-semibold text-gray-700 text-xs sm:text-sm lg:text-base">Cybersécurité</p>
                     </div>
                     <div class="text-center">
-                        <i class="fas fa-link text-4xl orange-accent mb-2"></i>
-                        <p class="font-semibold text-gray-700">Blockchain</p>
+                        <i class="fas fa-link text-2xl sm:text-3xl lg:text-4xl orange-accent mb-2"></i>
+                        <p class="font-semibold text-gray-700 text-xs sm:text-sm lg:text-base">Blockchain</p>
                     </div>
                     <div class="text-center">
-                        <i class="fas fa-atom text-4xl blue-accent mb-2"></i>
-                        <p class="font-semibold text-gray-700">Post-Quantum</p>
+                        <i class="fas fa-atom text-2xl sm:text-3xl lg:text-4xl blue-accent mb-2"></i>
+                        <p class="font-semibold text-gary-700 text-xs sm:text-sm lg:text-base">Post-Quantum</p>
                     </div>
                 </div>
             </div>
@@ -620,65 +655,78 @@
     </footer>
 
         <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-        
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
-                mobileMenu.classList.add('hidden');
-            }
-        });
-    
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    
-        // Add active state to navigation
-        window.addEventListener('scroll', () => {
-            let current = '';
-            const sections = document.querySelectorAll('section');
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
             
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= (sectionTop - 200)) {
-                    current = section.getAttribute('id');
-                }
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    mobileMenu.classList.toggle('hidden');
+                    menuIcon.classList.toggle('hidden');
+                    closeIcon.classList.toggle('hidden');
+                });
+                
+                // Close mobile menu when clicking on a link
+                const mobileLinks = mobileMenu.querySelectorAll('a');
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                        menuIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                    });
+                });
+                
+                // Close mobile menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+                        mobileMenu.classList.add('hidden');
+                        menuIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                    }
+                });
+            }
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
             });
-    
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('text-orange-500');
-                if (link.getAttribute('href') === '#' + current) {
-                    link.classList.add('text-orange-500');
-                }
+
+            // Add active state to navigation
+            window.addEventListener('scroll', () => {
+                let current = '';
+                const sections = document.querySelectorAll('section');
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('text-orange-500');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('text-orange-500');
+                    }
+                });
             });
         });
     </script>
 </body>
 </html>
-
 
 
