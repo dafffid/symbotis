@@ -110,28 +110,83 @@
     </style>
 </head>
 <body class="bg-white">
-    <!-- Header Navigation -->
-    <nav class="premium-gradient shadow-lg sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex-shrink-0">
-                    <span class="text-white text-xl font-bold">iZiChange</span>
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#accueil" class="text-white nav-link px-3 py-2 text-sm font-medium">Accueil</a>
-                        <a href="#services" class="text-white nav-link px-3 py-2 text-sm font-medium">Services</a>
-                        <a href="#processus" class="text-white nav-link px-3 py-2 text-sm font-medium">Processus</a>
-                        <a href="#expertise" class="text-white nav-link px-3 py-2 text-sm font-medium">Expertise</a>
-                        <a href="#equipe" class="text-white nav-link px-3 py-2 text-sm font-medium">Équipe</a>
-                        <a href="#testimonials" class="text-white nav-link px-3 py-2 text-sm font-medium">Témoignages</a>
-                        <a href="#contact" class="text-white nav-link px-3 py-2 text-sm font-medium">Contact</a>
-                        <a href="https://blog.izichange.fr" class="text-white nav-link px-3 py-2 text-sm font-medium">Blog</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
+    
+    <!-- Header Navigation - position replaced for the seo and mobile menu-->
+    
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>iZiChange - Transformation Digitale & IA pour Entreprises | Consulting TPE PME</title>
+    <meta name="description" content="iZiChange accompagne les TPE, PME et grandes entreprises dans leur transformation digitale avec l'IA, cybersécurité et blockchain. ROI garanti 30-90 jours.">
+    <meta name="keywords" content="transformation digitale, intelligence artificielle, cybersécurité, blockchain, consulting, TPE, PME, automatisation, ROI">
+    <meta name="author" content="iZiChange">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="iZiChange - Transformation Digitale & IA pour Entreprises">
+    <meta property="og:description" content="Accompagnement en transformation digitale avec IA, cybersécurité et blockchain. ROI garanti 30-90 jours.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.izichange.fr">
+    <meta property="og:site_name" content="iZiChange">
+    <meta property="og:locale" content="fr_FR">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="iZiChange - Transformation Digitale & IA">
+    <meta name="twitter:description" content="Accompagnement en transformation digitale avec IA, cybersécurité et blockchain.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.izichange.fr">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
+    
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data - JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "iZiChange",
+        "url": "https://www.izichange.fr",
+        "logo": "https://www.izichange.fr/logo.png",
+        "description": "Transformation digitale et innovation technologique pour entreprises",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "FR"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "contact@izichange.fr",
+            "telephone": "+33686846429",
+            "contactType": "Customer Service"
+        },
+        "sameAs": [
+            "https://blog.izichange.fr"
+        ],
+        "foundingDate": "2024",
+        "knowsAbout": [
+            "Intelligence Artificielle",
+            "Cybersécurité", 
+            "Blockchain",
+            "Post-Quantum",
+            "Transformation Digitale"
+        ]
+    }
+    </script>
 
     <!-- Hero Section -->
     <section id="accueil" class="min-h-screen flex items-center justify-center subtle-gradient">
@@ -564,7 +619,29 @@
         </div>
     </footer>
 
-    <script>
+        <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -578,7 +655,7 @@
                 }
             });
         });
-
+    
         // Add active state to navigation
         window.addEventListener('scroll', () => {
             let current = '';
@@ -591,7 +668,7 @@
                     current = section.getAttribute('id');
                 }
             });
-
+    
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.classList.remove('text-orange-500');
                 if (link.getAttribute('href') === '#' + current) {
@@ -602,5 +679,6 @@
     </script>
 </body>
 </html>
+
 
 
