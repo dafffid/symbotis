@@ -3,11 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iZiChange - Transformation & Innovation</title>
+    
+    <!-- SEO Enhanced Meta Tags -->
+    <title>iZiChange - Transformation Digitale IA TPE PME | Consulting Cybersécurité Blockchain</title>
+    <meta name="description" content="Expert transformation digitale pour TPE/PME : IA, cybersécurité, blockchain. ROI garanti 30-90j. Cabinet Thales/Airbus. Contactez nos experts HEC/X.">
+    <meta name="keywords" content="transformation digitale, intelligence artificielle TPE, cybersécurité PME, blockchain entreprise, consulting IA, automatisation, ROI digital, David Servais, Vincent Mijoule">
+    <meta name="author" content="iZiChange - David Servais, Vincent Mijoule">
+    <meta name="robots" content="index, follow, max-snippet:160, max-image-preview:large">
+    
+    <!-- Performance et SEO -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    <link rel="canonical" href="https://www.izichange.fr">
+    
+    <!-- Open Graph optimisé -->
+    <meta property="og:title" content="iZiChange - Expert Transformation Digitale IA pour TPE/PME">
+    <meta property="og:description" content="ROI garanti 30-90j. Experts HEC/Polytechnique. IA, Cybersécurité, Blockchain pour entreprises.">
+    <meta property="og:url" content="https://www.izichange.fr">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="iZiChange - Transformation Digitale IA TPE/PME">
+    <meta name="twitter:description" content="ROI garanti 30-90j. Experts transformation digitale.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Stylesheets -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
+         /* CTA Button Enhancement */
+        .cta-primary {
+            background: linear-gradient(135deg, #ea580c 0%, #f39448 100%);
+            color: white;
+            padding: 16px 40px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(234, 88, 12, 0.3);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(234, 88, 12, 0.4);
+            background: linear-gradient(135deg, #f39448 0%, #ea580c 100%);
+        }
+        
+        .cta-primary:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .cta-primary:hover:before {
+            left: 100%;
+        }
+        
+        /* Floating CTA */
+        .floating-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
         * {
             font-family: 'Inter', sans-serif;
         }
@@ -108,7 +189,53 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
     </style>
-    <!-- Header Navigation -->
+
+    <!-- Structured Data amélioré -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "iZiChange",
+        "alternateName": "iZiChange Transformation Digitale",
+        "url": "https://www.izichange.fr",
+        "logo": "https://www.izichange.fr/logo.png",
+        "description": "Expert transformation digitale pour TPE/PME : IA, cybersécurité, blockchain avec ROI garanti 30-90 jours",
+        "priceRange": "€€€",
+        "telephone": "+33686846429",
+        "email": "contact@izichange.fr",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "FR"
+        },
+        "founder": [
+            {
+                "@type": "Person",
+                "name": "David Servais",
+                "jobTitle": "Digital Transformation & Business Developer",
+                "alumniOf": "HEC Paris",
+                "worksFor": "iZiChange"
+            },
+            {
+                "@type": "Person", 
+                "name": "Vincent Mijoule",
+                "jobTitle": "Tech Entrepreneur",
+                "alumniOf": "École Polytechnique",
+                "worksFor": "iZiChange"
+            }
+        ],
+        "serviceType": [
+            "Transformation Digitale",
+            "Intelligence Artificielle",
+            "Cybersécurité", 
+            "Blockchain",
+            "Consulting TPE PME"
+        ],
+        "areaServed": "France"
+    }
+    </script>
+</head>
+<body class="bg-white">
+    
     <nav class="premium-gradient shadow-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
@@ -227,12 +354,12 @@
     <section id="accueil" class="min-h-screen flex items-center justify-center subtle-gradient px-4">
         <div class="text-center hero-animation w-full max-w-6xl mx-auto">
             <div class="mb-8">
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold orange-accent mb-4 logo-glow">iZiChange</h1>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold orange-accent mb-4 logo-glow">iZiChange - Expert Transformation Digitale IA</h1>
                 <p class="text-lg sm:text-xl text-gray-600 mb-8 px-4">Transformation & Innovation made easy</p>
             </div>
             <div class="w-full">
                 <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold premium-title mb-6 px-4 leading-tight">
-                    Gains et économies directes sur vos process et ressources grâce à l'adoption des nouvelles technologies
+                    Gains et économies directes sur vos process et ressources grâce à l'adoption de l'IA, la Cybersécurité et les services numériques.
                 </h2>
                 <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mt-8 px-4">
                     <div class="text-center">
@@ -251,6 +378,15 @@
                         <i class="fas fa-atom text-2xl sm:text-3xl lg:text-4xl blue-accent mb-2"></i>
                         <p class="font-semibold text-gary-700 text-xs sm:text-sm lg:text-base">Post-Quantum</p>
                     </div>
+
+                    <!-- CTA Principal -->
+                                    <div class="mt-12 px-4">
+                                        <button class="cta-primary mb-4" onclick="scrollToContact()">
+                                            💡 Discutons de votre challenge. Prenons Rendez-vous.
+                                        </button>
+                                        <p class="text-sm text-gray-500">Consultation gratuite • ROI garanti 30-90 jours</p>
+                                    </div>
+
                 </div>
             </div>
         </div>
@@ -654,8 +790,33 @@
         </div>
     </footer>
 
+  <!-- Floating CTA -->
+    <div class="floating-cta md:hidden">
+        <button class="cta-primary text-sm px-6 py-3" onclick="scrollToContact()">
+            📞 Prenons RDV
+        </button>
+    </div>
+    
         <script>
         document.addEventListener('DOMContentLoaded', function() {
+
+         // CTA Scroll Function
+            window.scrollToContact = function() {
+                document.getElementById('contact').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+            
+            // Track CTA clicks
+            document.querySelectorAll('.cta-primary').forEach(button => {
+                button.addEventListener('click', function() {
+                    console.log('CTA clicked');
+                });
+            });
+
+
+            
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
             const menuIcon = document.getElementById('menu-icon');
@@ -728,5 +889,6 @@
     </script>
 </body>
 </html>
+
 
 
