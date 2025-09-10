@@ -49,6 +49,7 @@ blog/
 - Email : contact@symbotis.com
 - Téléphone : +33 (0)6 86 84 64 29
 - Site web : https://www.symbotis.com
+- Prendre Rdv : https://calendar.app.google/MeKjaEoSZLgeEtW99
 
 ## 📈 SEO & Analytics
 
