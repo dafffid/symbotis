@@ -600,9 +600,11 @@
                 </div>
                 
                 <div class="text-center p-6">
-                    <i class="fab fa-linkedin text-4xl orange-accent mb-4"></i>
-                    <h3 class="text-lg font-bold premium-subtitle mb-3">LinkedIn</h3>
-                    <p class="text-gray-600">Suivez-nous sur LinkedIn</p>
+                    <a href="https://www.linkedin.com/company/symbotis" target="_blank" rel="noopener noreferrer" class="block hover:transform hover:scale-105 transition-transform duration-200">
+                        <i class="fab fa-linkedin text-4xl orange-accent mb-4"></i>
+                        <h3 class="text-lg font-bold premium-subtitle mb-3">LinkedIn</h3>
+                        <p class="text-gray-600">Suivez-nous sur LinkedIn</p>
+                    </a>
                 </div>
                 
                 <div class="text-center p-6">
@@ -613,12 +615,34 @@
             </div>
             
             <div class="text-center mt-12">
-                <div class="bg-gradient-to-r from-orange-500 to-blue-600 text-white p-8 rounded-xl">
-                    <h3 class="text-2xl font-bold mb-4">Prêt à transformer votre entreprise ?</h3>
-                    <p class="text-lg mb-6">Contactez-nous pour une consultation gratuite</p>
-                   <a class="cta-button inline-block" href="https://calendar.app.google/NmG5JJxeFB8xzJvW6" target="_blank">
-                    Prendre Rendez-vous
-                    </a>
+                <div class="bg-gradient-to-r from-orange-500 to-blue-600 text-white p-8 rounded-xl" style="background: linear-gradient(to right, #f97316, #2563eb);">
+                    <h3 class="text-2xl font-bold text-white mb-4">Prêt à transformer votre entreprise ?</h3>
+                    <p class="text-lg text-white mb-6">Contactez-nous pour une consultation gratuite</p>
+                    
+                    <!-- Contact Form -->
+                    <form id="contact-form" class="max-w-md mx-auto space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <input type="text" name="nom" id="nom" placeholder="Nom" required
+                                       class="w-full px-4 py-3 rounded-lg text-gray-800 bg-white border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 focus:outline-none transition-all duration-300">
+                            </div>
+                            <div>
+                                <input type="text" name="prenom" id="prenom" placeholder="Prénom" required
+                                       class="w-full px-4 py-3 rounded-lg text-gray-800 bg-white border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 focus:outline-none transition-all duration-300">
+                            </div>
+                        </div>
+                        <div>
+                            <input type="email" name="email" id="email" placeholder="Email" required
+                                   class="w-full px-4 py-3 rounded-lg text-gray-800 bg-white border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 focus:outline-none transition-all duration-300">
+                        </div>
+                        <div>
+                            <textarea name="message" id="message" rows="4" placeholder="Message" required
+                                      class="w-full px-4 py-3 rounded-lg text-gray-800 bg-white border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 focus:outline-none transition-all duration-300 resize-vertical"></textarea>
+                        </div>
+                        <button type="submit" class="cta-button inline-block w-full">
+                            Contactez-nous
+                        </button>
+                    </form>
                 </div>
             </div>
             
@@ -676,6 +700,61 @@
                     console.log('CTA clicked');
                 });
             });
+            
+            // Handle contact form submission
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    const submitButton = contactForm.querySelector('button[type="submit"]');
+                    const originalText = submitButton.textContent;
+                    
+                    // Update button state
+                    submitButton.textContent = 'Envoi en cours...';
+                    submitButton.disabled = true;
+                    
+                    try {
+                        const formData = new FormData(contactForm);
+                        
+                        const response = await fetch('https://formcarry.com/s/PXeLIboaBp5', {
+                            method: 'POST',
+                            body: formData,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        });
+                        
+                        if (response.ok) {
+                            // Success
+                            submitButton.textContent = 'Message envoyé !';
+                            submitButton.style.backgroundColor = '#22c55e';
+                            contactForm.reset();
+                            
+                            // Reset button after 3 seconds
+                            setTimeout(() => {
+                                submitButton.textContent = originalText;
+                                submitButton.disabled = false;
+                                submitButton.style.backgroundColor = '';
+                            }, 3000);
+                        } else {
+                            throw new Error('Erreur lors de l\'envoi');
+                        }
+                    } catch (error) {
+                        // Error
+                        submitButton.textContent = 'Erreur - Réessayer';
+                        submitButton.style.backgroundColor = '#ef4444';
+                        console.error('Form submission error:', error);
+                        
+                        // Reset button after 3 seconds
+                        setTimeout(() => {
+                            submitButton.textContent = originalText;
+                            submitButton.disabled = false;
+                            submitButton.style.backgroundColor = '';
+                        }, 3000);
+                    }
+                });
+            }
 
 
             
