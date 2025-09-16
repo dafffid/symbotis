@@ -96,15 +96,35 @@
         "areaServed": "France"
     }
     </script>
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17574118374"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'AW-17574118374');
     </script>
+
+    <!-- Event snippet for Envoi de formulaire pour prospects conversion page
+    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+    function gtag_report_conversion(url) {
+    var callback = function () {
+        if (typeof(url) != 'undefined') {
+        window.location = url;
+        }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-17574118374/xMT1CPCR_5sbEOaH_7tB',
+        'value': 1.0,
+        'currency': 'EUR',
+        'event_callback': callback
+    });
+    return false;
+    }
+    </script>
+
 </head>
 <body class="bg-white">
     
@@ -741,6 +761,9 @@
                             submitButton.textContent = 'Message envoyé !';
                             submitButton.style.backgroundColor = '#22c55e';
                             contactForm.reset();
+                            
+                            // Track conversion
+                            gtag_report_conversion();
                             
                             // Reset button after 3 seconds
                             setTimeout(() => {
